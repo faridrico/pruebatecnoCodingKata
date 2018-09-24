@@ -16,11 +16,10 @@ public class Asegurado {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@NotNull
 	@Column(name="CD_ASEGURADO")
 	private int cdAsegurado;
 	
-	@Column(name="NM_DOCUEMNTO")
+	@Column(name="NM_DOCUMENTO")
 	@NotNull
 	@NotEmpty
 	private String nmDocumento;

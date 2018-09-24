@@ -15,7 +15,6 @@ public class Poliza {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@NotNull
 	@Column(name = "CD_POLIZA")
 	private int cdPoliza;
 
@@ -23,17 +22,27 @@ public class Poliza {
 	@NotEmpty
 	@Column(name = "DS_NUMERO")
 	private String dsNumero;
+	
+	@NotNull
+	@NotEmpty
+	@Column(name = "NM_VALOR_POLIZA")
+	private String nmValorPoliza;
 
 	
 	public Poliza() {
 
 	}
 
-	public Poliza(@NotNull int cdPoliza, @NotNull @NotEmpty String dsNumero) {
+
+
+	public Poliza(int cdPoliza, @NotNull @NotEmpty String dsNumero, @NotNull @NotEmpty String nmValorPoliza) {
 		super();
 		this.cdPoliza = cdPoliza;
 		this.dsNumero = dsNumero;
+		this.nmValorPoliza = nmValorPoliza;
 	}
+
+
 
 	public int getCdPoliza() {
 		return cdPoliza;
@@ -51,11 +60,26 @@ public class Poliza {
 		this.dsNumero = dsNumero;
 	}
 
+
+
+	public String getNmValorPoliza() {
+		return nmValorPoliza;
+	}
+
+
+
+	public void setNmValorPoliza(String nmValorPoliza) {
+		this.nmValorPoliza = nmValorPoliza;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Poliza [cdPoliza=" + cdPoliza + ", dsNumero=" + dsNumero + "]";
+		return "Poliza [cdPoliza=" + cdPoliza + ", dsNumero=" + dsNumero + ", nmValorPoliza=" + nmValorPoliza + "]";
 	}
-	
+
+
 
 
 }

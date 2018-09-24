@@ -17,12 +17,12 @@ public class Vehiculo {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@NotNull
 	@Column(name="CD_VEHICULO")
 	private int cdVehiculo;
 	
 	@NotNull
 	@NotEmpty
+	@NotNull
 	@Column(name="DS_PLACA")
 	private String dsPlaca;
 	
@@ -33,7 +33,7 @@ public class Vehiculo {
 	
 	@NotNull
 	@NotEmpty
-	@Column(name="DS_MODELO")
+	@Column(name="DS_MARCA")
 	private String dsMarca;
 	
 	@NotNull

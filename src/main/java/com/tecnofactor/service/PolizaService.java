@@ -1,5 +1,9 @@
 package com.tecnofactor.service;
 
-public interface PolizaService {
 
+import com.tecnofactor.model.Poliza;
+
+public interface PolizaService {
+	
+	public Poliza findByDsNumero(String dsNumero);
 }

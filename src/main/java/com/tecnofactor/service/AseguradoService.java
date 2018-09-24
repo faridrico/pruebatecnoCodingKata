@@ -1,5 +1,10 @@
 package com.tecnofactor.service;
 
-public interface AseguradoService {
+import java.util.Optional;
 
+import com.tecnofactor.model.Asegurado;
+
+public interface AseguradoService {
+	
+	public Asegurado findByNmDocumento(String nmDocumento);
 }
